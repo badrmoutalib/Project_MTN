@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/proj/proj.h
+stddef.h
+-
+proj_symbol_rename.h
+../include/proj/proj_symbol_rename.h
+
+../include/proj/proj_symbol_rename.h
+
+/home/moutalib/Desktop/C++ TD /Projet MNT/src/Projection.cpp
+fstream
+-
+proj.h
+/home/moutalib/Desktop/C++ TD /Projet MNT/src/proj.h
+Projection.h
+/home/moutalib/Desktop/C++ TD /Projet MNT/src/Projection.h
+
+/home/moutalib/Desktop/C++ TD /Projet MNT/src/Projection.h
+stdio.h
+-
+iostream
+-
+string
+-
+vector
+-
+proj.h
+/home/moutalib/Desktop/C++ TD /Projet MNT/src/proj.h
+

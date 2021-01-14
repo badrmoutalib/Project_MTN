@@ -1,0 +1,60 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/CGAL/Color_ramp.h
+
+../include/proj/proj.h
+stddef.h
+-
+proj_symbol_rename.h
+../include/proj/proj_symbol_rename.h
+
+../include/proj/proj_symbol_rename.h
+
+/home/moutalib/Desktop/C++ TD /Projet MNT/src/DTM.cpp
+DTM.h
+/home/moutalib/Desktop/C++ TD /Projet MNT/src/DTM.h
+
+/home/moutalib/Desktop/C++ TD /Projet MNT/src/DTM.h
+stdio.h
+-
+iostream
+-
+vector
+-
+proj.h
+/home/moutalib/Desktop/C++ TD /Projet MNT/src/proj.h
+CGAL/Exact_predicates_inexact_constructions_kernel.h
+-
+CGAL/Projection_traits_xy_3.h
+-
+CGAL/Point_set_3.h
+-
+CGAL/Point_set_3/IO.h
+-
+CGAL/Delaunay_triangulation_2.h
+-
+CGAL/Triangulation_vertex_base_with_info_2.h
+-
+CGAL/Triangulation_face_base_with_info_2.h
+-
+CGAL/Polygon_mesh_processing/locate.h
+-
+CGAL/Polygon_mesh_processing/triangulate_hole.h
+-
+CGAL/Polygon_mesh_processing/border.h
+-
+CGAL/Polygon_mesh_processing/remesh.h
+-
+Color_ramp.h
+/home/moutalib/Desktop/C++ TD /Projet MNT/src/Color_ramp.h
+fstream
+-
+queue
+-
+

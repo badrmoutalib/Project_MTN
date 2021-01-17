@@ -38,31 +38,17 @@ class DTM
 {
 
 private:
-	/** brief width set to default 1920
-	*/
-	std::size_t m_width = 1920;
-	/** brief x y z structure specific to CGAL lib
-	*/
-	CGAL::Point_set_3<Point_3> points;
-	/** brief x y z structure specific to Proj lib
-	*/
-	std::vector<PJ_XYZ> *m_Coords;
-
+	
+	std::size_t m_width = 1920;/**< width set to default 1920. */
+	CGAL::Point_set_3<Point_3> points;/**< x y z structure specific to CGAL lib. */
+	std::vector<PJ_XYZ> *m_Coords;/**< brief x y z structure specific to Proj lib. */
 
 public:
-	/** brief Constructor Digital terrain Map 
-	* \ Inputs Coords pointer
-	*/
-	DTM(std::vector<PJ_XYZ> *Coords);
-	/** brief Sets coords point in CGAL point_3 data structure
-	*/
-	void point_set();
-	/** brief Sets width
-	*/
-	void set_width(double width);
-	/** brief creates raster image in PPM file format
-	*/
-	void create_raster();
+
+	DTM(std::vector<PJ_XYZ> *Coords); //!< Constructor Digital terrain Map param Coords PJ_XYZ vector pointer.
+	void point_set(); //!< coords point setter in CGAL point_3 data structure.
+	void set_width(double width); //!< Width setter.
+	void create_raster();//!< Member function creates raster image in PPM file format.
 };
 
 

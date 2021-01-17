@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -Wall -Wextra -std=c++14 -g  -shared -Wl,-soname,libDTM.so -o libDTM.so CMakeFiles/DTM.dir/src/DTM.cpp.o   -L"/home/moutalib/Desktop/C++ TD /Projet MNT/./lib/proj/lib" 

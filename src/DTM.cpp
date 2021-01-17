@@ -34,7 +34,7 @@ void DTM::create_raster()
 	*/ 
 	std::size_t height = std::size_t((bbox.ymax() - bbox.ymin()) * m_width / (bbox.xmax() - bbox.xmin()));
 	std::cerr << "Rastering with resolution " << m_width << "x" << height << std::endl;
-	/** brief Use PPM format (Portable PixMap) for simplicity
+	/** brief Use PPM format (Portable PixMap) 
 	*/
 	std::ofstream raster_ofile("raster.ppm", std::ios_base::binary);
 	/** brief PPM header

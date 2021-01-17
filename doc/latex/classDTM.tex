@@ -1,47 +1,29 @@
-\hypertarget{classDTM}{}\doxysection{D\+TM Class Reference}
+\hypertarget{classDTM}{}\doxysection{DTM Class Reference}
 \label{classDTM}\index{DTM@{DTM}}
 
 
-{\ttfamily \#include $<$D\+T\+M.\+h$>$}
+{\ttfamily \#include $<$DTM.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classDTM_ae66b2240c325a4bbbbea0a13c98b2aa0}{D\+TM}} (std\+::vector$<$ P\+J\+\_\+\+X\+YZ $>$ $\ast$Coords)
-\item 
+\mbox{\Hypertarget{classDTM_ae66b2240c325a4bbbbea0a13c98b2aa0}\label{classDTM_ae66b2240c325a4bbbbea0a13c98b2aa0}} 
+\mbox{\hyperlink{classDTM_ae66b2240c325a4bbbbea0a13c98b2aa0}{DTM}} (std\+::vector$<$ PJ\+\_\+\+XYZ $>$ $\ast$Coords)
+\begin{DoxyCompactList}\small\item\em Constructor Digital terrain Map param Coords PJ\+\_\+\+XYZ vector pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDTM_ac39d7b2b42cec3360b536f4aacfa5bf4}\label{classDTM_ac39d7b2b42cec3360b536f4aacfa5bf4}} 
 void \mbox{\hyperlink{classDTM_ac39d7b2b42cec3360b536f4aacfa5bf4}{point\+\_\+set}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em coords point setter in CGAL point\+\_\+3 data structure. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDTM_af89a71e81d00a8ff69061f7906092237}{set\+\_\+width}} (double width)
-\item 
+\begin{DoxyCompactList}\small\item\em Width setter. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDTM_a04992caee2c91f6216bf9119308f71f9}{create\+\_\+raster}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Member function creates raster image in PPM file format. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\textbackslash{} class \mbox{\hyperlink{classDTM}{D\+TM}} \textbackslash{} use C\+G\+AL library \textbackslash{} brief triangulates the coordinates and creates a dtm object and then creates raster. \textbackslash{} author Badr Moutalib \textbackslash{} date 2021 
+\textbackslash{} class \mbox{\hyperlink{classDTM}{DTM}} \textbackslash{} use CGAL library \textbackslash{} brief triangulates the coordinates and creates a dtm object and then creates raster. \textbackslash{} author Badr Moutalib \textbackslash{} date 2021 
 
-Definition at line 37 of file D\+T\+M.\+h.
+Definition at line 37 of file DTM.\+h.
 
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classDTM_ae66b2240c325a4bbbbea0a13c98b2aa0}\label{classDTM_ae66b2240c325a4bbbbea0a13c98b2aa0}} 
-\index{DTM@{DTM}!DTM@{DTM}}
-\index{DTM@{DTM}!DTM@{DTM}}
-\doxysubsubsection{\texorpdfstring{DTM()}{DTM()}}
-{\footnotesize\ttfamily D\+T\+M\+::\+D\+TM (\begin{DoxyParamCaption}\item[{std\+::vector$<$ P\+J\+\_\+\+X\+YZ $>$ $\ast$}]{Coords }\end{DoxyParamCaption})}
-
-brief Constructor Digital terrain Map \textbackslash{} Inputs Coords pointer 
-
-Definition at line 3 of file D\+T\+M.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{4 \{}
-\DoxyCodeLine{5     m\_Coords = Coords;}
-\DoxyCodeLine{6 \}}
-
-\end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
@@ -49,17 +31,21 @@ Definition at line 3 of file D\+T\+M.\+cpp.
 \index{DTM@{DTM}!create\_raster@{create\_raster}}
 \index{create\_raster@{create\_raster}!DTM@{DTM}}
 \doxysubsubsection{\texorpdfstring{create\_raster()}{create\_raster()}}
-{\footnotesize\ttfamily void D\+T\+M\+::create\+\_\+raster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void DTM\+::create\+\_\+raster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-brief creates raster image in P\+PM file format brief Create D\+SM using Triangulated Irregular Network Data structure
+
+
+Member function creates raster image in PPM file format. 
+
+brief Create DSM using Triangulated Irregular Network Data structure
 
 brief Create 3-\/dimensional bounding-\/box
 
 brief Generate raster image
 
-brief Use P\+PM format (Portable Pix\+Map) for simplicity
+brief Use PPM format (Portable Pix\+Map)
 
-brief P\+PM header
+brief PPM header
 
 brief Use rainbow color ramp output
 
@@ -71,7 +57,7 @@ brief Points outside the convex hull will be colored black
 
 brief Color ramp generates a color depending on a value from 0 to 1
 
-Definition at line 25 of file D\+T\+M.\+cpp.
+Definition at line 25 of file DTM.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -79,9 +65,9 @@ Definition at line 25 of file D\+T\+M.\+cpp.
 \DoxyCodeLine{29     TIN dtm(points.points().begin(), points.points().end());}
 \DoxyCodeLine{32     CGAL::Bbox\_3 bbox = CGAL::bbox\_3(points.points().begin(), points.points().end());}
 \DoxyCodeLine{35     std::size\_t height = std::size\_t((bbox.ymax() -\/ bbox.ymin()) * m\_width / (bbox.xmax() -\/ bbox.xmin()));}
-\DoxyCodeLine{36     std::cerr << \textcolor{stringliteral}{"Rastering with resolution "} << m\_width << \textcolor{stringliteral}{"x"} << height << std::endl;}
-\DoxyCodeLine{39     std::ofstream raster\_ofile(\textcolor{stringliteral}{"raster.ppm"}, std::ios\_base::binary);}
-\DoxyCodeLine{42     raster\_ofile << \textcolor{stringliteral}{"P6"} << std::endl << m\_width << \textcolor{stringliteral}{" "} << height << std::endl << 255 << std::endl;}
+\DoxyCodeLine{36     std::cerr << \textcolor{stringliteral}{"{}Rastering with resolution "{}} << m\_width << \textcolor{stringliteral}{"{}x"{}} << height << std::endl;}
+\DoxyCodeLine{39     std::ofstream raster\_ofile(\textcolor{stringliteral}{"{}raster.ppm"{}}, std::ios\_base::binary);}
+\DoxyCodeLine{42     raster\_ofile << \textcolor{stringliteral}{"{}P6"{}} << std::endl << m\_width << \textcolor{stringliteral}{"{} "{}} << height << std::endl << 255 << std::endl;}
 \DoxyCodeLine{45     Color\_ramp color\_ramp;}
 \DoxyCodeLine{50     TIN::Face\_handle location;}
 \DoxyCodeLine{53     \textcolor{keywordflow}{for} (std::size\_t y = 0; y < height; ++ y)}
@@ -114,38 +100,19 @@ Definition at line 25 of file D\+T\+M.\+cpp.
 \DoxyCodeLine{84 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classDTM_ac39d7b2b42cec3360b536f4aacfa5bf4}\label{classDTM_ac39d7b2b42cec3360b536f4aacfa5bf4}} 
-\index{DTM@{DTM}!point\_set@{point\_set}}
-\index{point\_set@{point\_set}!DTM@{DTM}}
-\doxysubsubsection{\texorpdfstring{point\_set()}{point\_set()}}
-{\footnotesize\ttfamily void D\+T\+M\+::point\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-brief Sets coords point in C\+G\+AL point\+\_\+3 data structure 
-
-Definition at line 9 of file D\+T\+M.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{10 \{}
-\DoxyCodeLine{11     \textcolor{keywordflow}{for}(std::vector<PJ\_XYZ>::iterator it = m\_Coords-\/>begin(); it != m\_Coords-\/>end() ; ++it)}
-\DoxyCodeLine{12     \{}
-\DoxyCodeLine{13         points.insert(Point(it-\/>x, it-\/>y, it-\/>z));}
-\DoxyCodeLine{14     \}}
-\DoxyCodeLine{15     }
-\DoxyCodeLine{16 \}}
-
-\end{DoxyCode}
 \mbox{\Hypertarget{classDTM_af89a71e81d00a8ff69061f7906092237}\label{classDTM_af89a71e81d00a8ff69061f7906092237}} 
 \index{DTM@{DTM}!set\_width@{set\_width}}
 \index{set\_width@{set\_width}!DTM@{DTM}}
 \doxysubsubsection{\texorpdfstring{set\_width()}{set\_width()}}
-{\footnotesize\ttfamily void D\+T\+M\+::set\+\_\+width (\begin{DoxyParamCaption}\item[{double}]{width }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void DTM\+::set\+\_\+width (\begin{DoxyParamCaption}\item[{double}]{width }\end{DoxyParamCaption})}
 
-brief Sets width
+
+
+Width setter. 
 
 brief Set width 
 
-Definition at line 19 of file D\+T\+M.\+cpp.
+Definition at line 19 of file DTM.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -158,6 +125,6 @@ Definition at line 19 of file D\+T\+M.\+cpp.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/moutalib/\+Desktop/\+C++ T\+D /\+Projet M\+N\+T/src/D\+T\+M.\+h\item 
-/home/moutalib/\+Desktop/\+C++ T\+D /\+Projet M\+N\+T/src/Map.\+h\item 
-/home/moutalib/\+Desktop/\+C++ T\+D /\+Projet M\+N\+T/src/D\+T\+M.\+cpp\end{DoxyCompactItemize}
+/home/moutalib/\+Desktop/\+C++ TD /\+Projet MNT/src/DTM.\+h\item 
+/home/moutalib/\+Desktop/\+C++ TD /\+Projet MNT/src/Map.\+h\item 
+/home/moutalib/\+Desktop/\+C++ TD /\+Projet MNT/src/DTM.\+cpp\end{DoxyCompactItemize}

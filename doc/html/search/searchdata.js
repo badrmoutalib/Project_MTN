@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "cdps",
+  0: "cdgpsu~",
   1: "dp",
-  2: "cdps"
+  2: "cdgpsu~"
 };
 
 var indexSectionNames =
